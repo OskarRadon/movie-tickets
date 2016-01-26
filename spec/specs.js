@@ -11,9 +11,10 @@ describe ("Ticket", function() {
     expect(testFirstRun.price()).to.equal(10);
   });
 
-  // it("will modify Ticket price based on isMatinee", function(){
-  //
-  // });
+  it("will modify Ticket price based on isMatinee", function(){
+    var testMatinee = new Ticket(true, true);
+    expect(testMatinee.price()).to.equal(8);
+  });
   //
   // it("will modify Ticket price based on age", function(){
   //

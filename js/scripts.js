@@ -1,17 +1,14 @@
-function Ticket(firstRun) {
+function Ticket(firstRun, isMatinee) {
     this.firstRun = firstRun;
-    // this.isMatinee = isMatinee;
+    this.isMatinee = isMatinee;
     // this.age = age;
 }
 
 Ticket.prototype.price = function() {
+  var startingValue = 10;
   if (this.firstRun === true) {
-    return 10;
+    return startingValue;
   } else {
-    return 8;
+    return (startingValue - 2);
   }
-
-
 }
-
-//generate price

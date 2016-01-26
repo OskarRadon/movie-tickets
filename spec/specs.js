@@ -1,20 +1,20 @@
 describe ("Ticket", function() {
   it("will generate Ticket based on input", function() {
     var testTicket = new Ticket(true);
-    expect(testTicket.firstRun).to.equal(true);
-    // expect(testTicket.isMatinee).to.equal(true);
-    // expect(testTicket.age).to.equal(65);
+    expect(testTicket.secondRun).to.equal(true);
+    // expect(testTicket.matinee).to.equal(true);
+    // expect(testTicket.s).to.equal(65);
   });
 
   it("will generate Ticket price based on firstRun", function(){
-    var testFirstRun = new Ticket(true);
-    expect(testFirstRun.price()).to.equal(10);
+    var testSecondRun = new Ticket(true);
+    expect(testSecondRun.price()).to.equal(8);
   });
 
-  it("will modify Ticket price based on isMatinee", function(){
-    var testMatinee = new Ticket(true, true);
-    expect(testMatinee.price()).to.equal(8);
-  });
+  // it("will modify Ticket price based on isMatinee", function(){
+  //   var testMatinee = new Ticket(true, true);
+  //   expect(testMatinee.price()).to.equal(8);
+  // });
   //
   // it("will modify Ticket price based on age", function(){
   //

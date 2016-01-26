@@ -2,8 +2,6 @@ describe ("Ticket", function() {
   it("will generate Ticket based on input", function() {
     var testTicket = new Ticket(true);
     expect(testTicket.secondRun).to.equal(true);
-    // expect(testTicket.matinee).to.equal(true);
-    // expect(testTicket.s).to.equal(65);
   });
 
   it("will generate Ticket price based on secondRun", function(){

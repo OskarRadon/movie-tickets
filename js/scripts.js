@@ -7,16 +7,28 @@ function Ticket(secondRun, matinee, discount) {
 Ticket.prototype.price = function() {
   var startingValue = 10;
 
-  if (this.secondRun === true) {
+  if (this.secondRun === "true") {
     startingValue -= 2;
   }
 
-  if (this.matinee === true) {
+  if (this.matinee === "true") {
     startingValue -= 2;
   }
 
-  if (this.discount === true) {
+  if (this.discount === "true") {
     startingValue -= 2;
   }
   return startingValue;
-}
+};
+
+$(document).ready(function() {
+  $("form#ticketSelect").submit(function(event) {
+    event.preventDefault();
+
+    var inputtedMovie = $("select#movieType").val();
+    var inputtedTime = $("select#time").val();
+    var inputtedAge = $("select#ageRange").val();
+
+    $("div#totalCost").append("<p>$" + Ticket.price +".00</p>");
+    });
+  });

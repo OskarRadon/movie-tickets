@@ -10,5 +10,10 @@ Ticket.prototype.price = function() {
   if (this.secondRun === true) {
     startingValue -= 2;
   }
+
+  if (this.matinee === true) {
+    startingValue -= 2;
+  }
+
   return startingValue;
 }

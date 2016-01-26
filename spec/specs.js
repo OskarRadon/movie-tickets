@@ -6,15 +6,15 @@ describe ("Ticket", function() {
     // expect(testTicket.s).to.equal(65);
   });
 
-  it("will generate Ticket price based on firstRun", function(){
+  it("will generate Ticket price based on secondRun", function(){
     var testSecondRun = new Ticket(true);
     expect(testSecondRun.price()).to.equal(8);
   });
 
-  // it("will modify Ticket price based on isMatinee", function(){
-  //   var testMatinee = new Ticket(true, true);
-  //   expect(testMatinee.price()).to.equal(8);
-  // });
+  it("will modify Ticket price based on matinee", function(){
+    var testMatinee = new Ticket(true, true);
+    expect(testMatinee.price()).to.equal(6);
+  });
   //
   // it("will modify Ticket price based on age", function(){
   //

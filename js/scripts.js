@@ -1,7 +1,7 @@
-function Ticket(secondRun, matinee) {
+function Ticket(secondRun, matinee, discount) {
     this.secondRun = secondRun;
     this.matinee = matinee;
-    // this.senior = senior;
+    this.discount = discount;
 }
 
 Ticket.prototype.price = function() {
@@ -15,5 +15,8 @@ Ticket.prototype.price = function() {
     startingValue -= 2;
   }
 
+  if (this.discount === true) {
+    startingValue -= 2;
+  }
   return startingValue;
 }

@@ -15,8 +15,9 @@ describe ("Ticket", function() {
     var testMatinee = new Ticket(true, true);
     expect(testMatinee.price()).to.equal(6);
   });
-  //
-  // it("will modify Ticket price based on age", function(){
-  //
-  // });
+
+  it("will modify Ticket price based on discount", function(){
+    var testMatinee = new Ticket(true, true, true);
+    expect(testMatinee.price()).to.equal(4);
+  });
 });

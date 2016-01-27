@@ -29,6 +29,6 @@ $(document).ready(function() {
     var inputtedTime = $("select#time").val();
     var inputtedAge = $("select#ageRange").val();
     var newTicket = new Ticket(inputtedMovie, inputtedTime, inputtedAge);
-    $("div#totalCost").append("<p>$" + newTicket.price() +".00</p>");
+    $("ul#totalCost").append("<p>$" + newTicket.price() +".00</p>");
     });
   });
